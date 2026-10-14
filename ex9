@@ -1,0 +1,29 @@
+Import java.util.Scanner;
+Public class GenericDemo {
+ Public static <E extends Comparable<E>> E max(E[] list) {
+ E max = list[0];
+ For (int I = 1; I < list.length; i++) {
+ If (list[i].compareTo(max) > 0) {
+ Max = list[i];
+ }
+ }
+ Return max;
+ }
+ Public static <E extends Comparable<E>> E min(E[] list) {
+ E min = list[0];
+ For (int I = 1; I < list.length; i++) {
+ If (list[i].compareTo(min) < 0) {
+ Min = list[i];
+ }
+ }
+ Return min;
+ }
+ Public static void main(String arg[]) { Integer[] a = {1, 5, 3, 15};
+ Double[] b = {.5, 67.8, 3.8, 0.01};
+ GenericDemo g = new GenericDemo();
+ System.out.println(“Find the max number in Integer list is: “ + g.max(a));
+ System.out.println(“Find the min number in Integer list is: “ + g.min(a));
+ System.out.println(“Find the max number in Double list is: “ + g.max(b));
+ System.out.println(“Find the min number in Double list is: “ + g.min(b));
+ }
+}
